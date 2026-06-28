@@ -3,221 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Band - F8 Course</title>
-    <!-- Nhúng CSS của dự án -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>The Band - F8 Course (Bootstrap Version)</title>
+    <!-- Nhúng CSS Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Nhúng Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Nhúng CSS Icons Themify Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <!-- Nhúng CSS của dự án -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#header" data-bs-offset="60" class="position-relative">
     <div id="main">
-        <!-- Begin: Header -->
-        <div id="header">
-            <!-- Begin: Nav -->
-            <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#band">Band</a></li>
-                <li><a href="#tour">Tour</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <a href="#">
-                        More
-                        <i class="nav-arrow-down ti-angle-down"></i>
-                    </a>
-                    <ul class="subnav">
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Extras</a></li>
-                        <li><a href="#">Media</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- End: Nav -->
+        <!-- Bắt đầu: Header -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top p-0" id="header">
+            <div class="container-fluid p-0 d-flex justify-content-between align-items-stretch position-relative">
+                <!-- Menu điều hướng thu gọn -->
+                <div class="d-flex align-items-center">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0 align-items-stretch" id="nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase px-4 py-3 active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase px-4 py-3" href="#band">Band</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase px-4 py-3" href="#tour">Tour</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase px-4 py-3" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white text-uppercase px-4 py-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    More
+                                </a>
+                                <ul class="dropdown-menu rounded-0 border-0 shadow m-0 bg-white" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item py-2 px-4 text-dark" href="#">Merchandise</a></li>
+                                    <li><a class="dropdown-item py-2 px-4 text-dark" href="#">Extras</a></li>
+                                    <li><a class="dropdown-item py-2 px-4 text-dark" href="#">Media</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-            <!-- Mobile menu button -->
-            <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
+                <!-- Các hành động bên phải: Search & Mobile Toggle -->
+                <div class="d-flex align-items-stretch">
+                    <!-- Nút Search -->
+                    <div class="search-btn d-flex align-items-center px-4" style="cursor: pointer;">
+                        <i class="search-icon ti-search text-white"></i>
+                    </div>
+                    
+                    <!-- Nút bật/tắt Mobile Menu -->
+                    <button class="navbar-toggler border-0 rounded-0 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="mobile-menu">
+                        <i class="menu-icon ti-menu text-white fs-5"></i>
+                    </button>
+                </div>
             </div>
+        </nav>
+        <!-- Kết thúc: Header -->
 
-            <!-- Search button -->
-            <div class="search-btn">
-                <i class="search-icon ti-search"></i>
+        <!-- Bắt đầu: Slider (Bootstrap Carousel) -->
+        <div id="sliderCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" style="margin-top: 46px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#sliderCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#sliderCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#sliderCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="padding-top: 50%; background: url('https://www.w3schools.com/w3images/chicago.jpg') top center / cover no-repeat;">
+                    <div class="carousel-caption d-block" style="bottom: 47px; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+                        <h2 class="fw-semibold text-white fs-3">Chicago</h2>
+                        <p class="text-white-50 mt-2 fs-6 d-none d-sm-block">Thank you, Chicago - A night we won't forget.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="padding-top: 50%; background: url('https://www.w3schools.com/w3images/la.jpg') top center / cover no-repeat;">
+                    <div class="carousel-caption d-block" style="bottom: 47px; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+                        <h2 class="fw-semibold text-white fs-3">Los Angeles</h2>
+                        <p class="text-white-50 mt-2 fs-6 d-none d-sm-block">We had the best time playing at Venice Beach!</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="padding-top: 50%; background: url('https://www.w3schools.com/w3images/ny.jpg') top center / cover no-repeat;">
+                    <div class="carousel-caption d-block" style="bottom: 47px; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+                        <h2 class="fw-semibold text-white fs-3">New York</h2>
+                        <p class="text-white-50 mt-2 fs-6 d-none d-sm-block">The atmosphere in New York was absolutely sublime.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#sliderCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#sliderCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <!-- End: Header -->
+        <!-- Kết thúc: Slider -->
 
-        <!-- Begin: Slider -->
-        <div id="slider" style="background-image: url('https://www.w3schools.com/w3images/chicago.jpg');">
-            <div class="text-content">
-                <h2 class="text-heading">Chicago</h2>
-                <div class="text-description">Thank you, Chicago - A night we won't forget.</div>
-            </div>
-        </div>
-        <!-- End: Slider -->
-
-        <!-- Begin: Content -->
-        <div id="content">
-            <!-- Section: About (The Band) -->
-            <div id="band" class="content-section">
-                <h2 class="section-heading">THE BAND</h2>
-                <p class="section-sub-heading">We love music</p>
-                <p class="about-text">
+        <!-- Bắt đầu: Content -->
+        <div id="content" class="container-fluid p-0">
+            <!-- Phần: About (The Band) -->
+            <div id="band" class="container py-5 text-center mx-auto" style="max-width: 800px; padding-left: 16px; padding-right: 16px;">
+                <h2 class="section-heading fw-light tracking-wide fs-1 mb-2 pt-4">THE BAND</h2>
+                <p class="section-sub-heading text-muted fst-italic mb-4">We love music</p>
+                <p class="about-text text-start text-secondary lh-lg mb-5" style="text-align: justify !important; font-size: 15px;">
                     We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                <div class="row members-list">
-                    <div class="col col-third s-col-full mt-32 text-center">
-                        <p class="member-name">Name</p>
-                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img">
+                <div class="row gy-4 mb-4 justify-content-center">
+                    <div class="col-md-4 col-sm-6 col-12 text-center">
+                        <p class="member-name mb-3 text-dark fs-6">Name</p>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img rounded shadow-sm w-75 mx-auto" style="max-width: 154px;">
                     </div>
-                    <div class="col col-third s-col-full mt-32 text-center">
-                        <p class="member-name">Name</p>
-                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img">
+                    <div class="col-md-4 col-sm-6 col-12 text-center">
+                        <p class="member-name mb-3 text-dark fs-6">Name</p>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img rounded shadow-sm w-75 mx-auto" style="max-width: 154px;">
                     </div>
-                    <div class="col col-third s-col-full mt-32 text-center">
-                        <p class="member-name">Name</p>
-                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img">
+                    <div class="col-md-4 col-sm-6 col-12 text-center">
+                        <p class="member-name mb-3 text-dark fs-6">Name</p>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img rounded shadow-sm w-75 mx-auto" style="max-width: 154px;">
                     </div>
                 </div>
             </div>
 
-            <!-- Section: Tour Dates -->
-            <div id="tour" class="tour-section">
-                <div class="content-section">
-                    <h2 class="section-heading text-white">TOUR DATES</h2>
-                    <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+            <!-- Phần: Tour Dates -->
+            <div id="tour" class="bg-black text-white py-5">
+                <div class="container py-4" style="max-width: 800px;">
+                    <h2 class="section-heading text-center fw-light tracking-wide fs-1 mb-2">TOUR DATES</h2>
+                    <p class="section-sub-heading text-center text-white-50 fst-italic mb-4">Remember to book your tickets!</p>
                     
-                    <!-- Tickets status list -->
-                    <ul class="tickets-list">
-                        <li>September <span class="sold-out">Sold out</span></li>
-                        <li>October <span class="sold-out">Sold out</span></li>
-                        <li>November <span class="quantity">3</span></li>
+                    <!-- Danh sách trạng thái Tickets -->
+                    <ul class="list-group rounded-0 text-dark mb-4">
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3 border-bottom text-muted rounded-0">
+                            <span>September <span class="badge bg-danger ms-3 rounded-0 px-2 py-1">Sold out</span></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3 border-bottom text-muted">
+                            <span>October <span class="badge bg-danger ms-3 rounded-0 px-2 py-1">Sold out</span></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3 rounded-0">
+                            <span>November</span>
+                            <span class="badge bg-dark rounded-pill px-3 py-2">3</span>
+                        </li>
                     </ul>
 
-                    <!-- Places cards list -->
-                    <div class="row places-list">
-                        <div class="col col-third s-col-full mt-16">
-                            <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="New York" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">New York</h3>
-                                <p class="place-time">Fri 27 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                    <!-- Danh sách cards địa điểm -->
+                    <div class="row g-4 pt-2">
+                        <div class="col-md-4 col-12">
+                            <div class="card h-100 border-0 rounded-0 shadow-sm text-dark transition-hover">
+                                <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="New York" class="card-img-top rounded-0">
+                                <div class="card-body bg-white">
+                                    <h5 class="card-title fw-bold fs-6">New York</h5>
+                                    <p class="card-subtitle text-muted small my-2">Fri 27 Nov 2016</p>
+                                    <p class="card-text small text-secondary">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal">Buy Tickets</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col col-third s-col-full mt-16">
-                            <img src="https://www.w3schools.com/w3images/paris.jpg" alt="Paris" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">Paris</h3>
-                                <p class="place-time">Sat 28 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                        <div class="col-md-4 col-12">
+                            <div class="card h-100 border-0 rounded-0 shadow-sm text-dark transition-hover">
+                                <img src="https://www.w3schools.com/w3images/paris.jpg" alt="Paris" class="card-img-top rounded-0">
+                                <div class="card-body bg-white">
+                                    <h5 class="card-title fw-bold fs-6">Paris</h5>
+                                    <p class="card-subtitle text-muted small my-2">Sat 28 Nov 2016</p>
+                                    <p class="card-text small text-secondary">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal">Buy Tickets</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col col-third s-col-full mt-16">
-                            <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="San Francisco" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">San Francisco</h3>
-                                <p class="place-time">Sun 29 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                        <div class="col-md-4 col-12">
+                            <div class="card h-100 border-0 rounded-0 shadow-sm text-dark transition-hover">
+                                <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="San Francisco" class="card-img-top rounded-0">
+                                <div class="card-body bg-white">
+                                    <h5 class="card-title fw-bold fs-6">San Francisco</h5>
+                                    <p class="card-subtitle text-muted small my-2">Sun 29 Nov 2016</p>
+                                    <p class="card-text small text-secondary">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal">Buy Tickets</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Section: Contact -->
-            <div id="contact" class="content-section">
-                <h2 class="section-heading">CONTACT</h2>
-                <p class="section-sub-heading">Fan? Drop a note!</p>
+            <!-- Phần: Contact -->
+            <div id="contact" class="container py-5" style="max-width: 800px;">
+                <h2 class="section-heading text-center fw-light tracking-wide fs-1 mb-2 pt-4">CONTACT</h2>
+                <p class="section-sub-heading text-center text-muted fst-italic mb-5">Fan? Drop a note!</p>
 
-                <div class="row contact-content">
-                    <!-- Contact info column -->
-                    <div class="col col-half s-col-full contact-info">
-                        <p><i class="ti-location-pin"></i>Chicago, US</p>
-                        <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
-                        <p><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+                <div class="row g-4">
+                    <!-- Cột thông tin Contact -->
+                    <div class="col-md-6 col-12 contact-info fs-5 text-secondary">
+                        <p class="mb-2"><i class="bi bi-geo-alt-fill me-2 text-dark"></i>Chicago, US</p>
+                        <p class="mb-2"><i class="bi bi-telephone-fill me-2 text-dark"></i>Phone: <a href="tel:+00 151515" class="text-decoration-none text-primary">+00 151515</a></p>
+                        <p class="mb-2"><i class="bi bi-envelope-fill me-2 text-dark"></i>Email: <a href="mailto:mail@mail.com" class="text-decoration-none text-primary">mail@mail.com</a></p>
                     </div>
-                    <!-- Contact form column -->
-                    <div class="col col-half s-col-full contact-form">
-                        <form action="">
-                            <div class="row">
-                                <div class="col col-half s-col-full">
-                                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                    <!-- Cột form Contact -->
+                    <div class="col-md-6 col-12">
+                        <form action="" class="needs-validation" novalidate>
+                            <div class="row g-2 mb-2">
+                                <div class="col-6">
+                                    <input type="text" name="name" placeholder="Name" required class="form-control rounded-0 py-2">
                                 </div>
-                                <div class="col col-half s-col-full s-mt-8">
-                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mt-8">
-                                <div class="col col-full">
-                                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                <div class="col-6">
+                                    <input type="email" name="email" placeholder="Email" required class="form-control rounded-0 py-2">
                                 </div>
                             </div>
-                            <input class="contact-submit-btn btn pull-right mt-16 s-full-width" type="submit" value="SEND">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <input type="text" name="message" placeholder="Message" required class="form-control rounded-0 py-2">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-dark rounded-0 px-4 py-2 text-uppercase fs-6" type="submit">SEND</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <!-- End: Contact -->
+            <!-- Kết thúc: Contact -->
 
-            <!-- Map Section -->
-            <div class="map-section">
-                <img src="https://www.w3schools.com/w3images/map.jpg" alt="Map">
+            <!-- Phần Map -->
+            <div class="map-section w-100">
+                <img src="https://www.w3schools.com/w3images/map.jpg" alt="Map" class="w-100 img-fluid filter-grayscale" style="filter: grayscale(50%);">
             </div>
         </div>
-        <!-- End: Content -->
+        <!-- Kết thúc: Content -->
 
-        <!-- Footer Section -->
-        <div id="footer">
-            <div class="socials-list">
-                <a href=""><i class="ti-facebook"></i></a>
-                <a href=""><i class="ti-instagram"></i></a>
-                <a href=""><i class="ti-youtube"></i></a>
-                <a href=""><i class="ti-pinterest"></i></a>
-                <a href=""><i class="ti-twitter"></i></a>
-                <a href=""><i class="ti-linkedin"></i></a>
+        <!-- Phần Footer -->
+        <div id="footer" class="bg-light text-center py-5">
+            <div class="socials-list mb-3 fs-3 d-flex justify-content-center gap-3">
+                <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-pinterest"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
             </div>
-            <p class="copyright">Powered by <a href="">w3.css</a></p>
+            <p class="copyright text-muted mb-0 small">Powered by <a href="#" class="text-secondary text-decoration-underline">w3.css</a> & <a href="#" class="text-secondary text-decoration-underline">Bootstrap</a></p>
         </div>
     </div>
 
-    <!-- Buy Tickets Modal -->
-    <div class="modal js-modal">
-        <div class="modal-container js-modal-container">
-            <div class="modal-close js-modal-close">
-                <i class="ti-close"></i>
+    <!-- Modal mua Tickets -->
+    <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0 border-0">
+                <div class="modal-header text-white justify-content-center position-relative py-4" style="background-color: #009688;">
+                    <h4 class="modal-title fs-3 fw-normal" id="ticketModalLabel">
+                        <i class="bi bi-bag-fill me-2"></i>Tickets
+                    </h4>
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="ticket-quantity" class="form-label text-dark">
+                                <i class="bi bi-cart-fill me-1"></i>Tickets, $15 per person
+                            </label>
+                            <input id="ticket-quantity" type="number" min="1" class="form-control rounded-0" placeholder="How many?">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ticket-email" class="form-label text-dark">
+                                <i class="bi bi-person-fill me-1"></i>Send To
+                            </label>
+                            <input id="ticket-email" type="email" class="form-control rounded-0" placeholder="Enter email">
+                        </div>
+                        <button type="submit" class="btn w-100 text-white py-2 rounded-0 border-0 fs-6 text-uppercase" style="background-color: #009688;">
+                            Pay <i class="bi bi-check-lg ms-1"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-between border-0 px-4 pb-4 bg-white">
+                    <button type="button" class="btn btn-danger rounded-0 px-3" data-bs-dismiss="modal">Close <i class="bi bi-x-lg ms-1"></i></button>
+                    <p class="modal-help mb-0">Need <a href="#" class="text-primary text-decoration-none">help?</a></p>
+                </div>
             </div>
-
-            <header class="modal-header">
-                <i class="modal-heading-icon ti-bag"></i>
-                Tickets
-            </header>
-
-            <div class="modal-body">
-                <label for="ticket-quantity" class="modal-label">
-                    <i class="ti-shopping-cart"></i>
-                    Tickets, $15 per person
-                </label>
-                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
-
-                <label for="ticket-email" class="modal-label">
-                    <i class="ti-user"></i>
-                    Send To
-                </label>
-                <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email">
-
-                <button id="buy-tickets">
-                    Pay <i class="ti-check"></i>
-                </button>
-            </div>
-
-            <footer class="modal-footer">
-                <p class="modal-help">Need <a href="">help?</a></p>
-            </footer>
         </div>
     </div>
 
     <!-- Nhúng Javascript xử lý tương tác -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

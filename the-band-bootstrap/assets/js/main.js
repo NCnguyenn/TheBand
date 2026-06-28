@@ -1,72 +1,42 @@
 // ==========================================
-// 1. XỬ LÝ ĐÓNG / MỞ TICKET MODAL (MUA VÉ)
+// 1. TỰ ĐỘNG ĐÓNG MOBILE MENU KHI CLICK LINK
 // ==========================================
-const buyBtns = document.querySelectorAll('.js-buy-ticket');
-const modal = document.querySelector('.js-modal');
-const modalContainer = document.querySelector('.js-modal-container');
-const modalClose = document.querySelector('.js-modal-close');
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('#nav .nav-link:not(.dropdown-toggle)');
+    const menuCollapse = document.getElementById('navbarNav');
 
-// Hàm hiển thị modal mua vé (thêm class open vào modal)
-function showBuyTickets() {
-    modal.classList.add('open');
-}
-
-// Hàm ẩn modal mua vé (gỡ bỏ class open của modal)
-function hideBuyTickets() {
-    modal.classList.remove('open');
-}
-
-// Lặp qua từng thẻ button và nghe hành vi click
-for (const buyBtn of buyBtns) {
-    buyBtn.addEventListener('click', showBuyTickets);
-}
-
-// Nghe hành vi click vào nút close
-modalClose.addEventListener('click', hideBuyTickets);
-
-// Nghe hành vi click bên ngoài modal để ẩn modal
-modal.addEventListener('click', hideBuyTickets);
-
-// Ngăn chặn hành vi ẩn modal khi click vào bên trong vùng modal-container
-modalContainer.addEventListener('click', function (event) {
-    event.stopPropagation();
+    if (menuCollapse) {
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // Kiểm tra xem menu đang hiển thị (ở dạng collapse trên mobile) hay không
+                const isMobileMenuOpen = menuCollapse.classList.contains('show');
+                if (isMobileMenuOpen) {
+                    // Sử dụng API Collapse của Bootstrap để ẩn menu
+                    const bsCollapse = bootstrap.Collapse.getInstance(menuCollapse) || new bootstrap.Collapse(menuCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+    }
 });
 
 
 // ==========================================
-// 2. XỬ LÝ ĐÓNG / MỞ MOBILE MENU
+// 2. BOOTSTRAP FORM VALIDATION (LIÊN HỆ)
 // ==========================================
-const header = document.getElementById('header');
-const mobileMenu = document.getElementById('mobile-menu');
-const headerHeight = header.clientHeight; // Lấy chiều cao mặc định của header (46px)
+(function () {
+    'use strict';
+    // Lấy tất cả các form cần áp dụng class validate của Bootstrap
+    const forms = document.querySelectorAll('.needs-validation');
 
-// Đóng/mở mobile menu
-mobileMenu.onclick = function () {
-    const isClosed = header.clientHeight === headerHeight;
-    if (isClosed) {
-        header.style.height = 'auto'; // Mở menu
-    } else {
-        header.style.height = null; // Đóng menu (bằng cách xóa style inline height)
-    }
-}
-
-
-// ==========================================
-// 3. TỰ ĐỘNG ĐÓNG MENU KHI CHỌN PHẦN TỬ
-// ==========================================
-const menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-
-for (var i = 0; i < menuItems.length; i++) {
-    const menuItem = menuItems[i];
-    
-    menuItem.onclick = function (event) {
-        // Kiểm tra xem có anh chị em liền kề và anh chị em đó có phải class subnav không
-        const isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
-        
-        if (isParentMenu) {
-            event.preventDefault(); // Bỏ qua hành vi mặc định nếu click vào mục "More"
-        } else {
-            header.style.height = null; // Đóng menu khi click vào các mục khác
-        }
-    }
-}
+    // Lặp qua và ngăn chặn việc submit nếu form không hợp lệ
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
