@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // ==========================================
     // 1. XỬ LÝ MOBILE MENU (ĐÓNG/MỞ)
-    // ==========================================
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navbarNav = document.getElementById('navbarNav');
     const header = document.getElementById('header');
@@ -32,9 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ==========================================
     // 2. CAROUSEL SLIDER (CHUYỂN ẢNH TỰ ĐỘNG & THỦ CÔNG)
-    // ==========================================
     let currentSlide = 0;
     const slidesCount = 3;
     const slides = [
@@ -126,9 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     startCarousel(); // Khởi chạy auto slide
 
-    // ==========================================
     // 3. TICKET MODAL MUA VÉ (BẬT/TẮT MƯỢT MÀ)
-    // ==========================================
     const buyBtns = document.querySelectorAll('.js-buy-ticket');
     const modal = document.getElementById('ticketModal');
     const modalContainer = document.getElementById('ticketModalContainer');
@@ -176,9 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ==========================================
     // 4. KIỂM TRA HỢP LỆ FORM (FORM VALIDATION)
-    // ==========================================
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
@@ -231,9 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ==========================================
     // 5. SCROLLSPY (CẬP NHẬT TRẠNG THÁI MENU KHI CUỘN)
-    // ==========================================
     const sections = ['#', '#band', '#tour', '#contact'];
     const menuItems = {
         '#': document.querySelector('#nav a[href="#"]') || document.querySelector('#nav a[href="#"]'),

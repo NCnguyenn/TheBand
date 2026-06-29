@@ -1,6 +1,4 @@
-// ==========================================
 // 1. TỰ ĐỘNG ĐÓNG MOBILE MENU KHI CLICK LINK
-// ==========================================
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('#nav .nav-link:not(.dropdown-toggle)');
     const menuCollapse = document.getElementById('navbarNav');
@@ -21,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// ==========================================
 // 2. BOOTSTRAP FORM VALIDATION (LIÊN HỆ)
-// ==========================================
 (function () {
     'use strict';
     // Lấy tất cả các form cần áp dụng class validate của Bootstrap
