@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!isValid) {
                 e.preventDefault(); // Ngăn submit
             } else {
-                alert('Cảm ơn bạn đã liên hệ! Tin nhắn của bạn đã được gửi thành công.');
+                alert('Thank you for contacting us! Your message has been sent successfully.');
                 contactForm.reset();
                 e.preventDefault(); // Demo chặn thực tế
             }
