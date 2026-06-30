@@ -133,3 +133,27 @@ body {
 .modal-content {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
+
+/* Hiệu ứng hover và click nâng cao cho các nút */
+.btn-custom-hover {
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, filter 0.2s ease !important;
+}
+
+.btn-custom-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25) !important;
+    filter: brightness(1.15);
+}
+
+/* Đối với nút đen: chuyển màu nền sang màu xám sáng và chữ đen trên hover */
+.btn-dark.btn-custom-hover:hover {
+    background-color: #ccc !important;
+    color: #000 !important;
+    border-color: #ccc !important;
+}
+
+.btn-custom-hover:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+    filter: brightness(0.95);
+}
