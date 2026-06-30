@@ -113,16 +113,22 @@
                 </p>
                 <div class="row gy-4 mb-4 justify-content-center">
                     <div class="col-md-4 col-sm-6 col-12 text-center">
-                        <p class="member-name mb-3 text-dark fs-6">Name</p>
-                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img rounded shadow-sm w-75 mx-auto" style="max-width: 154px;">
+                        <p class="member-name mb-3 text-dark fs-6 fw-semibold">Name</p>
+                        <div class="member-img-container mx-auto overflow-hidden rounded shadow-sm" style="max-width: 154px; width: 75%;">
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img img-fluid w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="Vocalist & Guitarist" style="cursor: pointer;">
+                        </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-12 text-center">
-                        <p class="member-name mb-3 text-dark fs-6">Name</p>
-                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img rounded shadow-sm w-75 mx-auto" style="max-width: 154px;">
+                        <p class="member-name mb-3 text-dark fs-6 fw-semibold">Name</p>
+                        <div class="member-img-container mx-auto overflow-hidden rounded shadow-sm" style="max-width: 154px; width: 75%;">
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img img-fluid w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="Keyboard & Bassist" style="cursor: pointer;">
+                        </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-12 text-center">
-                        <p class="member-name mb-3 text-dark fs-6">Name</p>
-                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img rounded shadow-sm w-75 mx-auto" style="max-width: 154px;">
+                        <p class="member-name mb-3 text-dark fs-6 fw-semibold">Name</p>
+                        <div class="member-img-container mx-auto overflow-hidden rounded shadow-sm" style="max-width: 154px; width: 75%;">
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="member-img img-fluid w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="Drums & Percussion" style="cursor: pointer;">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -136,14 +142,14 @@
                     <!-- Danh sách trạng thái Tickets -->
                     <ul class="list-group rounded-0 text-dark mb-4">
                         <li class="list-group-item d-flex justify-content-between align-items-center py-3 border-bottom text-muted rounded-0">
-                            <span>September <span class="badge bg-danger ms-3 rounded-0 px-2 py-1">Sold out</span></span>
+                            <span>September <span class="badge bg-danger ms-3 rounded-0 px-2 py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Sold out in 24 hours!">Sold out</span></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center py-3 border-bottom text-muted">
-                            <span>October <span class="badge bg-danger ms-3 rounded-0 px-2 py-1">Sold out</span></span>
+                            <span>October <span class="badge bg-danger ms-3 rounded-0 px-2 py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Sold out in 12 hours!">Sold out</span></span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center py-3 rounded-0">
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3 rounded-0 list-group-item-action" style="cursor: pointer;">
                             <span>November</span>
-                            <span class="badge bg-dark rounded-pill px-3 py-2">3</span>
+                            <span class="badge bg-dark rounded-pill px-3 py-2" data-bs-toggle="tooltip" data-bs-placement="left" title="Only 3 tickets remaining!">3</span>
                         </li>
                     </ul>
 
@@ -151,34 +157,40 @@
                     <div class="row g-4 pt-2">
                         <div class="col-md-4 col-12">
                             <div class="card h-100 border-0 rounded-0 shadow-sm text-dark transition-hover">
-                                <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="New York" class="card-img-top rounded-0">
+                                <div class="overflow-hidden">
+                                    <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="New York" class="card-img-top rounded-0 transition-zoom">
+                                </div>
                                 <div class="card-body bg-white">
                                     <h5 class="card-title fw-bold fs-6">New York</h5>
                                     <p class="card-subtitle text-muted small my-2">Fri 27 Nov 2016</p>
                                     <p class="card-text small text-secondary">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal">Buy Tickets</button>
+                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal" data-bs-toggle="tooltip" data-bs-placement="top" title="Book seats for New York!">Buy Tickets</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 col-12">
                             <div class="card h-100 border-0 rounded-0 shadow-sm text-dark transition-hover">
-                                <img src="https://www.w3schools.com/w3images/paris.jpg" alt="Paris" class="card-img-top rounded-0">
+                                <div class="overflow-hidden">
+                                    <img src="https://www.w3schools.com/w3images/paris.jpg" alt="Paris" class="card-img-top rounded-0 transition-zoom">
+                                </div>
                                 <div class="card-body bg-white">
                                     <h5 class="card-title fw-bold fs-6">Paris</h5>
                                     <p class="card-subtitle text-muted small my-2">Sat 28 Nov 2016</p>
                                     <p class="card-text small text-secondary">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal">Buy Tickets</button>
+                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal" data-bs-toggle="tooltip" data-bs-placement="top" title="Book seats for Paris!">Buy Tickets</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 col-12">
                             <div class="card h-100 border-0 rounded-0 shadow-sm text-dark transition-hover">
-                                <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="San Francisco" class="card-img-top rounded-0">
+                                <div class="overflow-hidden">
+                                    <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="San Francisco" class="card-img-top rounded-0 transition-zoom">
+                                </div>
                                 <div class="card-body bg-white">
                                     <h5 class="card-title fw-bold fs-6">San Francisco</h5>
                                     <p class="card-subtitle text-muted small my-2">Sun 29 Nov 2016</p>
                                     <p class="card-text small text-secondary">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal">Buy Tickets</button>
+                                    <button class="btn btn-dark w-100 rounded-0 mt-3" data-bs-toggle="modal" data-bs-target="#ticketModal" data-bs-toggle="tooltip" data-bs-placement="top" title="Book seats for San Francisco!">Buy Tickets</button>
                                 </div>
                             </div>
                         </div>

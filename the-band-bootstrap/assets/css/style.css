@@ -87,8 +87,33 @@ body {
     transition: opacity 0.3s;
 }
 
-.card-img-top:hover {
-    opacity: 0.8;
+/* Hiệu ứng Zoom ảnh địa điểm trong TOUR DATES */
+.transition-zoom {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover .transition-zoom {
+    transform: scale(1.08);
+    filter: brightness(1.05);
+}
+
+/* Hiệu ứng hover nhóm ảnh thành viên */
+.member-img-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-img-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.member-img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.member-img-container:hover .member-img {
+    transform: scale(1.08);
+    filter: brightness(1.05);
 }
 
 /* --- MAP & FOOTER --- */
