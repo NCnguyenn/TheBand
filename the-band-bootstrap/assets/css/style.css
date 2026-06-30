@@ -145,11 +145,11 @@ body {
     filter: brightness(1.15);
 }
 
-/* Đối với nút đen: chuyển màu nền sang màu xám sáng và chữ đen trên hover */
+/* Đối với nút đen: chuyển màu nền sang màu đỏ và chữ trắng trên hover */
 .btn-dark.btn-custom-hover:hover {
-    background-color: #ccc !important;
-    color: #000 !important;
-    border-color: #ccc !important;
+    background-color: #f44336 !important;
+    color: #fff !important;
+    border-color: #f44336 !important;
 }
 
 .btn-custom-hover:active {
